@@ -1,0 +1,38 @@
+.deposit-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #000;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.deposit-page h2 {
+  color: #fff;
+}
+
+.deposit-page label {
+  color: #fff;
+}
+
+.deposit-page select {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #ccc;
+}

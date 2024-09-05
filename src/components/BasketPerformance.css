@@ -1,0 +1,32 @@
+.basket-performance {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #000;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.basket-performance h2 {
+  color: #fff;
+}
+
+.basket-performance table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.basket-performance th, .basket-performance td {
+  border: 1px solid #fff;
+  padding: 8px;
+  text-align: center;
+  color: #fff;
+}
+
+.basket-performance th {
+  background-color: #333;
+}
+
+.basket-performance tfoot td {
+  font-weight: bold;
+}
