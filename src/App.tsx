@@ -3,6 +3,7 @@ import LandingPage from './components/LandingPage';
 import StablecoinDeposit from './components/StablecoinDeposit';
 import BasketManagement from './components/BasketManagement';
 import BasketPerformance from './components/BasketPerformance';
+import WalletInfo from './components/WalletInfo';
 import { Stablecoin, PerformanceData } from './types';
 
 const App: React.FC = () => {
@@ -29,8 +30,16 @@ const App: React.FC = () => {
     setStep(3);
   };
 
+  const handleDisconnect = () => {
+    setStep(0);
+    setSelectedCoin(null);
+    setWeights({});
+    setAllocations([]);
+  };
+
   return (
     <div>
+      <WalletInfo onDisconnect={handleDisconnect} />
       {step === 0 && <LandingPage onStart={handleStart} />}
       {step === 1 && <StablecoinDeposit onCoinSelect={handleCoinSelect} />}
       {step === 2 && selectedCoin && (

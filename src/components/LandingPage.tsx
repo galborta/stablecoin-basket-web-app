@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { ConnectButton, useActiveAccount } from "thirdweb/react";
+import { client } from '../app/client';
 import './LandingPage.css'; // Create a CSS file for styling
 
 interface Props {
@@ -6,6 +8,14 @@ interface Props {
 }
 
 const LandingPage: React.FC<Props> = ({ onStart }) => {
+  const account = useActiveAccount();
+
+  useEffect(() => {
+    if (account) {
+      onStart();
+    }
+  }, [account, onStart]);
+
   return (
     <div className="landing-page">
       <header className="landing-header">
@@ -29,7 +39,9 @@ const LandingPage: React.FC<Props> = ({ onStart }) => {
           Join us today and take control of your investments with the Stablecoin Basket Manager. 
           Start building your basket and watch your savings grow!
         </p>
-        <button onClick={onStart}>Get Started</button> {/* Button to start the application */}
+        <div className="button-container">
+          <ConnectButton client={client} />
+        </div>
       </main>
     </div>
   );

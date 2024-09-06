@@ -8,11 +8,12 @@ body {
 
 .landing-page {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 50px auto;
   padding: 20px;
-  background-color: #000;
+  background-color: #1a1a1a;
   border-radius: 8px;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .landing-header {
@@ -32,6 +33,10 @@ body {
 .landing-content p {
   color: #ccc;
   line-height: 1.6;
+}
+
+.button-container {
+  margin-top: 30px;
 }
 
 button {
